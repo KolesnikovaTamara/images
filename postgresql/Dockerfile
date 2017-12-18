@@ -2,9 +2,9 @@ FROM centos-base
 LABEL description="Postgresql image"
 ARG postgresql_rpm=https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm
 ARG PGDATA=/var/lib/pgsql/9.6/data/
-ARG db_name=***REMOVED***
-ARG db_user=***REMOVED***
-ARG db_password=***REMOVED***
+ARG db_name=
+ARG db_user=
+ARG db_password=
 COPY files ./
 RUN yum -y install $postgresql_rpm && \
     yum -y install postgresql96 postgresql96-server && \
